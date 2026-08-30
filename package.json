@@ -5,6 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "preinstall": "apt-get update && apt-get install -y python3",
+    "install": "npm install --ignore-scripts",
+    "postinstall": "npm rebuild",
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -40,4 +43,4 @@
     "pino": "^10.1.0",
     "yt-dlp-exec": "^1.0.2"
   }
-}
+  }
